@@ -23,7 +23,8 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.instructions}>
-          Filtered text input, only numbers allowed
+          Sample of bug #18874.
+          Controlled text input with filtering, only numbers should be allowed.
         </Text>
         <TextInput style={styles.textInput} value={this.state.text} onChangeText={this.onChangeText}/>
       </View>
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+    marginHorizontal: 16,
   },
   textInput: {
     alignSelf: 'stretch',
