@@ -5,11 +5,10 @@
 
 import React from 'react';
 import {
-  Platform,
+  KeyboardAvoidingView,
   StyleSheet,
   Text,
   TextInput,
-  View
 } from 'react-native';
 
 export default class App extends React.Component {
@@ -21,13 +20,13 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
         <Text style={styles.instructions}>
           Sample of bug #18874.
           Controlled text input with filtering, only numbers should be allowed.
         </Text>
         <TextInput style={styles.textInput} value={this.state.text} onChangeText={this.onChangeText}/>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
   onChangeText = (text) => {
